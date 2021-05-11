@@ -1,0 +1,51 @@
+1) Создание базы данных
+CREATE DATABASE database
+CREATE USER testuser WITH PASSWORD '123';
+
+
+psql -h localhost database testuser
+123
+
+
+CREATE TABLE t_employees (
+    pk_id serial PRIMARY KEY,
+    c_lastname varchar(30) NOT NULL,
+    c_firstname varchar(30) NOT NULL,
+    c_middlename varchar(30),
+    c_salary money NOT NULL,
+    c_email varchar(60),
+    c_position varchar (90) NOT NULL 
+);
+
+CREATE TABLE partition.t_clients (
+    pk_id serial PRIMARY KEY,
+    c_lastname varchar(30) NOT NULL,
+    c_firstname varchar(30) NOT NULL,
+    c_middlename varchar(30),
+    c_email varchar(60)
+);
+
+
+CREATE TABLE auth.t_user (
+    pk_id serial PRIMARY KEY,
+    c_login varchar (30) NOT NULL,
+    c_password bytea NOT NULL,
+    c_last_in timestamp
+);
+
+
+2) Применение файла скрипта
+
+
+3)Добавление данных в таблицу
+INSERT INTO partition.t_employees (c_lastname, c_firstname, c_middlename, c_salary, c_email, c_position) VALUES ('Иванов', 'Иван', 'Иванович', 40000, 'iii@mail.ru', 'Программист');
+INSERT INTO partition.t_employees (c_lastname, c_firstname, c_middlename, c_salary, c_email, c_position) VALUES ('Петров', 'Петр', 'Петрович', 30000, 'ppp@mail.ru', 'Программист');
+INSERT INTO partition.t_employees (c_lastname, c_firstname, c_salary, c_position) VALUES ('Test', 'User', 10000, 'Tester');
+INSERT INTO partition.t_employees (c_lastname, c_firstname, c_middlename, c_salary, c_position) VALUES ('Test', 'User', 'Dva', 50000, 'Tester');
+
+INSERT INTO partition.t_clients (c_lastname, c_firstname, c_middlename, c_email) VALUES ('Азаренков', 'Михаил', 'Иванович', 'azmih@gmail.com');
+INSERT INTO partition.t_clients (c_lastname, c_firstname, c_middlename, c_email) VALUES ('Ветров', 'Александр', 'Павлович', 'vap@mail.ru');
+INSERT INTO partition.t_clients (c_lastname, c_firstname, c_middlename, c_email) VALUES ('Сухарева', 'Инна', 'Петровна', 'inpetr@gmail.com');
+
+INSERT INTO auth.t_user (c_login, c_password) VALUES ('admin', 'pass');
+INSERT INTO auth.t_user (c_login, c_password) VALUES ('testuser1', '123');

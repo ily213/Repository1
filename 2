@@ -1,0 +1,48 @@
+1) Добавление комментариев
+
+COMMENT ON TABLE partition.t_employees IS 'таблица сотрудников';
+COMMENT ON COLUMN partition.t_employees.pk_id IS 'уникальный идентификатор сотрудника';
+COMMENT ON COLUMN partition.t_employees.fk_position IS 'внешний ключ на должность сотрудника';
+COMMENT ON COLUMN partition.t_employees.c_lastname IS 'фамилия сотрудника';
+COMMENT ON COLUMN partition.t_employees.c_firstname IS 'имя сотрудника';
+COMMENT ON COLUMN partition.t_employees.c_middlename IS 'отчество сотрудника';
+COMMENT ON COLUMN partition.t_employees.c_salary IS 'заработная плата сотрудника';
+COMMENT ON COLUMN partition.t_employees.c_email IS 'электронная почта';
+
+COMMENT ON TABLE partition.t_clients IS 'таблица клиентов';
+COMMENT ON COLUMN partition.t_clients.pk_id IS 'уникальный идентификатор клиента';
+COMMENT ON COLUMN partition.t_clients.c_lastname IS 'фамилия клиента';
+COMMENT ON COLUMN partition.t_clients.c_firstname IS 'имя клиента';
+COMMENT ON COLUMN partition.t_clients.c_middlename IS 'отчество клиента';
+COMMENT ON COLUMN partition.t_clients.c_email IS 'электронная почта';
+
+COMMENT ON TABLE partition.ref_positions IS 'справочник должностей';
+COMMENT ON COLUMN partition.ref_positions.pk_id IS 'уникальный идентификатор должности';
+COMMENT ON COLUMN partition.ref_positions.c_name IS 'название должности';
+
+COMMENT ON TABLE auth.t_user IS 'таблица пользователей';
+COMMENT ON COLUMN auth.t_user.pk_id IS 'уникальный идентификатор пользователя';
+COMMENT ON COLUMN auth.t_user.c_login IS 'логин';
+COMMENT ON COLUMN auth.t_user.c_password IS 'пароль';
+COMMENT ON COLUMN auth.t_user.c_last_in IS 'время последнего входа';
+
+2) Добавление таблицы-справочника должностей
+
+CREATE TABLE partition.ref_positions (
+    pk_id serial PRIMARY KEY,
+    c_name varchar(90) NOT NULL
+);
+
+3) Скрипт заполнения на основе уникальных значений колонки c_position таблицы t_employees
+
+INSERT INTO partition.ref_positions (c_name) SELECT c_position FROM partition.t_employees;
+ALTER TABLE partition.t_employees DROP COLUMN c_position;
+
+4) Скрипт на добавление значений внешнего ключа должностей (ref_positions) в таблицу t_employees.
+
+ALTER TABLE partition.t_employees ADD COLUMN fk_position int REFERENCES partition.ref_positions;
+
+UPDATE partition.t_employees SET fk_position = 1 WHERE pk_id = 1;
+UPDATE partition.t_employees SET fk_position = 1 WHERE pk_id = 2;
+UPDATE partition.t_employees SET fk_position = 2 WHERE pk_id = 3;
+UPDATE partition.t_employees SET fk_position = 2 WHERE pk_id = 4;

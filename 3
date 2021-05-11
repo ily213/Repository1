@@ -1,0 +1,13 @@
+1) Выбрать всех сотрудников с их должностью, используя JOIN
+
+SELECT c_lastname, c_firstname, c_middlename, c_name FROM partition.t_employees LEFT JOIN partition.ref_positions ON partition.ref_positions.pk_id = fk_position;
+
+2) Выбрать ФИО и почту всех сотрудников и клиентов, используя UNION
+
+SELECT c_lastname, c_firstname, c_middlename, c_email FROM partition.t_employees UNION SELECT c_lastname, c_firstname, c_middlename, c_email FROM partition.t_clients;
+
+3) Выбрать минимальную, максимальную и среднюю зарплату сотрудников. Для минимальной и максимальной зп вывести ФИО сотрудников.
+
+SELECT c_lastname, c_firstname, c_middlename, c_salary FROM partition.t_employees WHERE c_salary = (SELECT min(c_salary) FROM partition.t_employees) UNION
+SELECT c_lastname, c_firstname, c_middlename, c_salary FROM partition.t_employees WHERE c_salary = (SELECT max(c_salary) FROM partition.t_employees) UNION
+SELECT '', '', '', avg(c_salary::NUMERIC)::money FROM partition.t_employees;
