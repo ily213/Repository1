@@ -1,0 +1,104 @@
+body
+{
+    background-color: burlywood;
+}
+.list
+{
+    position: relative;
+    width: 220px;
+    height: 400px;
+    background-color:rgb(255, 255, 198);
+    float: left;
+}
+#basketList
+{
+    left: 100px;
+}
+.listContainer
+{
+    overflow-y: auto;
+    border: 1px solid black;
+}
+.row
+{
+    position: relative;
+    margin-top: 1px;
+    margin-left: 5px;
+    width: 194px;
+    height: 17px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.rowText
+{
+    font-family: 'Arial Narrow';
+    font-size: 14px;
+}
+.rowAmount
+{
+    float: left;
+    left: 95px;
+    position: relative;
+    width: 35px;
+    text-align: center;
+}
+.rowName
+{
+    float: left;
+    position: relative;
+    width: 65px;
+}
+.rowPrice
+{
+    float: left;
+    position: relative;
+    width: 15px;
+}
+.title
+{
+    position: relative;
+    height: 17px;
+    width: 194px;
+    font-size: 14px;
+    font-family: 'Arial Narrow';
+    font-weight: 700;
+    margin-left: 5px;
+}
+.titleName
+{
+    float: left;
+    position: relative;
+    width: 60px;
+}
+.titlePrice
+{
+    float: left;
+    left: 35px;
+    position: relative;
+    width: 40px;
+
+}
+.titleAmount
+{
+    float: left;
+    left: 35px;
+    position: relative;
+    width: 65px;
+    text-align: center;
+}
+.Sum
+{
+    margin-top: 50px;
+    width: 220px;
+    text-align: center;
+    height: 17px;
+}
+.SelectDisabled {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;   
+    -khtml-user-select: none;    
+    -moz-user-select: none;      
+    -ms-user-select: none;       
+    user-select: none;           
+  }

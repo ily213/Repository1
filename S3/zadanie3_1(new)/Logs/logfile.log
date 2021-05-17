@@ -1,0 +1,29 @@
+[log]2021/04/27 17:37:21 Исходный файл: linksTest.txt.
+[log]2021/04/27 17:37:21 Значения флагов: 
+	-url='linksTest.txt'
+	-directory='resultTest/'
+[log]2021/04/27 17:37:21 Файл успешно открыт.
+[log]2021/04/27 17:37:21 Данные были успешно считаны.
+[log]2021/04/27 17:37:21 Количество считанных символов: 290.
+[log]2021/04/27 17:37:21 GET-запрос по адресу: 'https://golang.org/' успешен.
+[log]2021/04/27 17:37:21 Файл: resultTest/golang.org.html был успешно создан.
+[log]2021/04/27 17:37:22 GET-запрос по адресу: 'https://www.bing.com/' успешен.
+[log]2021/04/27 17:37:22 Файл: resultTest/www.bing.com.html был успешно создан.
+[log]2021/04/27 17:37:23 GET-запрос по адресу: 'https://www.microsoft.com' успешен.
+[log]2021/04/27 17:37:23 Файл: resultTest/www.microsoft.com.html был успешно создан.
+[log]2021/04/27 17:37:23 GET-запрос по адресу: 'https://www.google.com/' успешен.
+[log]2021/04/27 17:37:23 Файл: resultTest/www.google.com.html был успешно создан.
+[log]2021/04/27 17:37:23 GET-запрос по адресу: 'https://learn.javascript.ru/' успешен.
+[log]2021/04/27 17:37:23 Файл: resultTest/learn.javascript.ru.html был успешно создан.
+[log]2021/04/27 17:37:24 GET-запрос по адресу: 'https://developer.mozilla.org/ru/docs/Learn/JavaScript' успешен.
+[log]2021/04/27 17:37:24 Файл: resultTest/JavaScript.html был успешно создан.
+[log]2021/04/27 17:37:24 GET-запрос по адресу: 'https://golangs.org/goroutines' успешен.
+[log]2021/04/27 17:37:24 Файл: resultTest/goroutines.html был успешно создан.
+[log]2021/04/27 17:37:24 GET-запрос по адресу: 'https://tproger.ru/tag/javascript/' успешен.
+[log]2021/04/27 17:37:24 Файл: resultTest/javascript.html был успешно создан.
+[log]2021/04/27 17:37:25 GET-запрос по адресу: 'http://golang-book.ru/' успешен.
+[log]2021/04/27 17:37:25 Файл: resultTest/golang-book.ru.html был успешно создан.
+[log]2021/04/27 17:37:25 GET-запрос по адресу: 'https://tour.golang.org/' успешен.
+[log]2021/04/27 17:37:25 Файл: resultTest/tour.golang.org.html был успешно создан.
+[log]2021/04/27 17:37:25 Время, затраченное на выполнение программы: 4.420505868s
+[log]2021/04/27 17:37:25 Выполнение программы завершено.

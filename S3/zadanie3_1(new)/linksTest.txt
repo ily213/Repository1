@@ -1,0 +1,10 @@
+https://golang.org/
+https://www.bing.com/
+https://www.microsoft.com
+https://www.google.com/
+https://learn.javascript.ru/
+https://developer.mozilla.org/ru/docs/Learn/JavaScript
+https://golangs.org/goroutines
+https://tproger.ru/tag/javascript/
+http://golang-book.ru/
+https://tour.golang.org/

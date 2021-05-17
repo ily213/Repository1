@@ -1,0 +1,56 @@
+body
+{
+    background-color: burlywood;
+}
+.list
+{
+    position: relative;
+    width: 360px;
+    height: 400px;
+    background-color:white;
+    float: left;
+}
+
+#priceSum
+{
+    width: 361px;
+    height: 20px;
+    position: absolute;
+    left: 469px;
+    top: 456px;
+    text-align: center;
+
+}
+
+
+#basketList
+{
+    left: 100px;
+}
+
+.row
+{
+    cursor: pointer;
+}
+
+.title
+{
+    width: 360px;
+    text-align: left;
+}
+.Sum
+{
+    background-color: blue;
+    margin-top: 50px;
+    width: 220px;
+    text-align: center;
+    height: 17px;
+}
+.SelectDisabled {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;   
+    -khtml-user-select: none;    
+    -moz-user-select: none;      
+    -ms-user-select: none;       
+    user-select: none;           
+  }

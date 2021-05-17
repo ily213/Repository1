@@ -1,0 +1,998 @@
+
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#  profile: http://ogp.me/ns/profile# fb: http://ogp.me/ns/fb#" lang="ru-RU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="preload" href="/wp-content/themes/bliss/assets/font/fontello.woff2?66325349" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/wp-content/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/wp-content/themes/bliss/assets/img/logo.svg">
+<link rel="preload" as="script" href="https://proxy.tproger.ru/yandex-metrika.js">
+<link rel="preconnect" href="https://mc.yandex.ru">
+<link rel="preconnect" href="https://mc.yandex.ru" crossorigin>
+<link rel="preconnect" href="https://vk.com">
+<link rel="preconnect" href="https://cdn.onesignal.com">
+<link rel="preconnect" href="https://onesignal.com" crossorigin>
+<link rel="preconnect" href="https://tproger.ru" crossorigin>
+<link rel="preconnect" href="https://sentry.tproger.ru" crossorigin>
+<link rel="dns-prefetch" href="https://track.tproger.ru">
+<script defer src="https://tproger.ru/wp-content/themes/bliss/assets/js/sentry.es6.min.x59707.js" onload="Sentry.init({ dsn: 'https://63f279b4a66348b9ade9e95f8bcb2e0e@sentry.tproger.ru/5302604', environment: 'tproger.ru', release: '05c1363468e0a5639a321b58a861fba9d7d91c64', tracesSampleRate: 0, beforeSend(event) { return ((window.ses = window.ses ? window.ses + 1 : 1) > 16) ? null : event }, }); window.setAnalyticsSentryTags && setAnalyticsSentryTags()"></script>
+
+<title>Руководство по JavaScript, новости по JS-фреймворкам</title>
+<meta name="description" content="Руководства и новости по JS-фреймворкам, библиотекам и платформам, написание игр на JS, обучение, трюки, разборы успешных проектов" />
+<link rel="canonical" href="https://tproger.ru/tag/javascript/" />
+<link rel="next" href="https://tproger.ru/tag/javascript/page/2/" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Руководство по JavaScript, новости по JS-фреймворкам" />
+<meta property="og:description" content="Руководства и новости по JS-фреймворкам, библиотекам и платформам, написание игр на JS, обучение, трюки, разборы успешных проектов" />
+<meta property="og:url" content="https://tproger.ru/tag/javascript/" />
+<meta property="og:site_name" content="Tproger" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@tproger" />
+
+<link rel='dns-prefetch' href='//tproger.ru' />
+<link rel="alternate" type="application/rss+xml" title="Tproger &raquo; Лента" href="https://tproger.ru/feed/" />
+<script defer src="https://tproger.ru/wp-content/cache/minify/b6e67.x59707.js"></script>
+<script async src="https://tproger.ru/wp-content/cache/minify/3f2c6.x59707.js"></script>
+<link rel="https://api.w.org/" href="https://tproger.ru/wp-json/" /><link rel="alternate" type="application/json" href="https://tproger.ru/wp-json/wp/v2/tags/25" /><link rel="icon" href="/favicon.ico?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2aa5a0">
+<meta name="apple-mobile-web-app-title" content="Tproger">
+<meta name="application-name" content="Tproger">
+<meta name="theme-color" content="#2aa5a0">
+</head>
+<body class="archive tag tag-javascript tag-25 dark">
+<style id="fake-style">
+					@font-face {
+		font-family: 'Roboto';
+		src:
+			local('Roboto Medium'),
+			local('Roboto-Medium'),
+			url('/wp-content/fonts/Roboto-Medium.woff2') format('woff2'),
+			url('/wp-content/fonts/Roboto-Medium.woff') format('woff'),
+			url('/wp-content/fonts/Roboto-Medium.ttf') format('truetype');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+	body {
+		margin: 0;
+	}
+	.dark {
+		background: #2b2a29;
+	} 				#fake-post {
+					display: block;
+					position: fixed;
+					color: #fff;
+					left: 20px;
+					right: 20px;
+					top: 73px;
+					line-height: 1.1;
+					margin: 0;
+					padding-top: 60px;
+				}
+				#fake-scroll {
+					display: none;
+				}
+				@media (min-width: 481px) {
+					#fake-post {
+						font-size: 34px;
+						padding-top: 0;
+						padding-right:79px;
+					}
+				}
+				@media (min-width: 977px) {
+					#fake-post {
+						font-size: 38px;
+						width: 940px;
+						left: calc((100% - 930px) / 2);
+						top: 84px;
+					}
+					#fake-scroll {
+						display: block;
+						position: relative;
+						top: 101%;
+						width: 1px;
+						height: 1px;
+					}
+				}
+				@media (min-width: 1320px) {
+					#fake-post {
+						width: 1270px;
+						left: calc((100% - 1260px) / 2);
+					}
+				}
+			</style>
+<h1 id="fake-post">JavaScript</h1>
+<div id="fake-scroll"></div>
+<link rel="stylesheet" href="https://tproger.ru/wp-content/cache/minify/94ae0.x59707.css" media="all" />
+<div id="page" style="display: none;" class="site">
+<div id="top-post-widget-container" class="t-widget-container tproger-widget subscription-widget" style='display:none;' data-ad data-type="4">
+<a href="#" class="t-widget-main-a" target="_blank" rel="noopener"> </a>
+<div class='t-widget-box-container' style='display:none'>
+<div class="t-widget" style="">
+<div class="top-post-widget-text" style='display:none'><strong>Хотите ещё больше веб-разработки?</strong><br>В канале Веб-страница только об этом и пишем.</div>
+<a style='display:none' class="btn bluth tproger btn- top-post-widget-button" href="" target="_blank" rel="noopener">Узнать подробнее</a>
+</div>
+</div>
+</div>
+<header id="masthead" role="banner" class="">
+<div class="top-duft-punk">
+<div id="header-container">
+<nav id="header" role="navigation" class="windowed">
+<div class="header-toogle">
+<div id="main-menu-toggle" class="header-item">
+<input id="main-menu-toggle-input" type="checkbox" />
+<div id="menu-cover"></div>
+<span class="main-menu-toggle-span"></span>
+<span class="main-menu-toggle-span"></span>
+<span class="main-menu-toggle-span"></span>
+<ul id="main-menu" class="show-on-idle"><li id="menu-item-116231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown tag-menu-item navigation__dropdown-item"><a href="javascript:void(0);" title="Лента" class="main-menu-a"><i class="icon-menu-hot menu-icons"></i>Лента<i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li id="menu-item-116232" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/" title="Сначала новое" class="main-menu-a"><i class="icon- menu-icons"></i>Сначала новое</a></li> <li id="menu-item-116233" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/top/hot/" title="Набирает популярность" class="main-menu-a"><i class="icon- menu-icons"></i>Набирает популярность</a></li> <li id="menu-item-116235" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/top/week/" title="Лучшее за неделю" class="main-menu-a"><i class="icon- menu-icons"></i>Лучшее за неделю</a></li> <li id="menu-item-116236" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/top/month/" title="Лучшее за месяц" class="main-menu-a"><i class="icon- menu-icons"></i>Лучшее за месяц</a></li> <li id="menu-item-116237" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/top/ever/" title="Лучшее за всё время" class="main-menu-a"><i class="icon- menu-icons"></i>Лучшее за всё время</a></li>
+</ul>
+</li><li id="menu-item-144836" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/editor/?utm_source=sidebar" title="Написать пост" class="main-menu-a"><i class="icon-edit menu-icons"></i>Написать пост</a></li><li id="menu-item-116286" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/jobs/?utm_source=tproger_ru_main_menu" title="Вакансии" class="main-menu-a"><i class="icon-menu-job menu-icons"></i>Вакансии</a></li><li id="menu-item-85895" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a title="События и курсы, на которых можно поднять свой уровень" href="/events/" title="События и курсы" class="main-menu-a"><i class="icon-menu-time menu-icons"></i>События и курсы</a></li><li id="menu-item-116238" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown tag-menu-item navigation__dropdown-item"><a href="javascript:void(0);" title="Рубрики" class="main-menu-a"><i class="icon-menu-heading menu-icons"></i>Рубрики<i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li id="menu-item-116246" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/curriculum/" title="Планы обучения" class="main-menu-a"><i class="icon- menu-icons"></i>Планы обучения</a></li> <li id="menu-item-12274" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a title="Задачи с IT-собеседований" href="https://tproger.ru/category/problems/" title="Задачки" class="main-menu-a"><i class="icon- menu-icons"></i>Задачки</a></li> <li id="menu-item-73978" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a title="Тесты и викторины" href="https://tproger.ru/category/quiz/" title="Тесты и викторины" class="main-menu-a"><i class="icon- menu-icons"></i>Тесты и викторины</a></li> <li id="menu-item-116243" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/books/" title="Книги" class="main-menu-a"><i class="icon- menu-icons"></i>Книги</a></li> <li id="menu-item-116240" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/video/" title="Видео" class="main-menu-a"><i class="icon- menu-icons"></i>Видео</a></li> <li id="menu-item-116244" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/explain/" title="Коротко о главном" class="main-menu-a"><i class="icon- menu-icons"></i>Коротко о главном</a></li> <li id="menu-item-21201" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a title="Ответы экспертов на вопросы читателей" href="https://tproger.ru/category/experts/" title="Советы экспертов" class="main-menu-a"><i class="icon- menu-icons"></i>Советы экспертов</a></li> <li id="menu-item-116249" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/articles/" title="Статьи" class="main-menu-a"><i class="icon- menu-icons"></i>Статьи</a></li> <li id="menu-item-116245" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/translations/" title="Переводы" class="main-menu-a"><i class="icon- menu-icons"></i>Переводы</a></li> <li id="menu-item-116247" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/digest/" title="Подборки" class="main-menu-a"><i class="icon- menu-icons"></i>Подборки</a></li> <li id="menu-item-116239" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/devnull/" title="Юмор" class="main-menu-a"><i class="icon- menu-icons"></i>Юмор</a></li> <li id="menu-item-116241" class="menu-item menu-item-type-taxonomy menu-item-object-category tag-menu-item navigation__dropdown-item"><a href="https://tproger.ru/category/interview/" title="Интервью" class="main-menu-a"><i class="icon- menu-icons"></i>Интервью</a></li>
+</ul>
+</li><li id="menu-item-116254" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown tag-menu-item navigation__dropdown-item"><a href="javascript:void(0);" title="Темы" class="main-menu-a"><i class="icon-menu-topics menu-icons"></i>Темы<i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li id="menu-item-116253" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/for-beginners/" title="Для начинающих" class="main-menu-a"><i class="icon- menu-icons"></i>Для начинающих</a></li> <li id="menu-item-116257" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/algorithms/" title="Алгоритмы" class="main-menu-a"><i class="icon- menu-icons"></i>Алгоритмы</a></li> <li id="menu-item-116258" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/design-patterns/" title="Паттерны проектирования" class="main-menu-a"><i class="icon- menu-icons"></i>Паттерны проектирования</a></li> <li id="menu-item-116260" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/software-development/" title="Методологии разработки" class="main-menu-a"><i class="icon- menu-icons"></i>Методологии разработки</a></li> <li id="menu-item-116255" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/web/" title="Веб-разработка" class="main-menu-a"><i class="icon- menu-icons"></i>Веб-разработка</a></li> <li id="menu-item-116256" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/gamedev/" title="Разработка игр" class="main-menu-a"><i class="icon- menu-icons"></i>Разработка игр</a></li> <li id="menu-item-116262" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/mobiledev/" title="Мобильная разработка" class="main-menu-a"><i class="icon- menu-icons"></i>Мобильная разработка</a></li> <li id="menu-item-116259" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/machine-learning/" title="Машинное обучение" class="main-menu-a"><i class="icon- menu-icons"></i>Машинное обучение</a></li> <li id="menu-item-116264" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/neural-network/" title="Нейронные сети" class="main-menu-a"><i class="icon- menu-icons"></i>Нейронные сети</a></li> <li id="menu-item-116263" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/ai/" title="Искусственный интеллект" class="main-menu-a"><i class="icon- menu-icons"></i>Искусственный интеллект</a></li> <li id="menu-item-116266" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/data-science/" title="Data Science" class="main-menu-a"><i class="icon- menu-icons"></i>Data Science</a></li> <li id="menu-item-116265" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/interface-design-ux/" title="Дизайн интерфейсов и UX" class="main-menu-a"><i class="icon- menu-icons"></i>Дизайн интерфейсов и UX</a></li> <li id="menu-item-116261" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/sysadm/" title="Системное администрирование" class="main-menu-a"><i class="icon- menu-icons"></i>Системное администрирование</a></li> <li id="menu-item-116294" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item divider navigation__dropdown-item"><a href="/" title="&#8212;" class="main-menu-a"><i class="icon- menu-icons"></i>&#8212;</a></li> <li id="menu-item-116291" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="#tagsModal" title="Все темы" class="main-menu-a"><i class="icon- menu-icons"></i>Все темы</a></li>
+</ul>
+</li><li id="menu-item-116269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown tag-menu-item navigation__dropdown-item"><a href="javascript:void(0);" title="Языки" class="main-menu-a"><i class="icon-menu-terminal menu-icons"></i>Языки<i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li id="menu-item-116272" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/python/" title="Python" class="main-menu-a"><i class="icon- menu-icons"></i>Python</a></li> <li id="menu-item-116270" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/javascript/" title="JavaScript" class="main-menu-a"><i class="icon- menu-icons"></i>JavaScript</a></li> <li id="menu-item-116275" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/go/" title="Golang" class="main-menu-a"><i class="icon- menu-icons"></i>Golang</a></li> <li id="menu-item-116276" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/java/" title="Java" class="main-menu-a"><i class="icon- menu-icons"></i>Java</a></li> <li id="menu-item-116273" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/cpp/" title="C++" class="main-menu-a"><i class="icon- menu-icons"></i>C++</a></li> <li id="menu-item-116274" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/c-sharp/" title="C#" class="main-menu-a"><i class="icon- menu-icons"></i>C#</a></li> <li id="menu-item-116277" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/php/" title="PHP" class="main-menu-a"><i class="icon- menu-icons"></i>PHP</a></li> <li id="menu-item-116278" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/css/" title="CSS" class="main-menu-a"><i class="icon- menu-icons"></i>CSS</a></li> <li id="menu-item-116279" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/sql/" title="SQL" class="main-menu-a"><i class="icon- menu-icons"></i>SQL</a></li> <li id="menu-item-136633" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/swift/" title="Swift" class="main-menu-a"><i class="icon- menu-icons"></i>Swift</a></li> <li id="menu-item-136634" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/c-language/" title="Язык Си" class="main-menu-a"><i class="icon- menu-icons"></i>Язык Си</a></li> <li id="menu-item-136635" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/asm/" title="Язык ассемблера" class="main-menu-a"><i class="icon- menu-icons"></i>Язык ассемблера</a></li> <li id="menu-item-136636" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/r-language/" title="Язык R" class="main-menu-a"><i class="icon- menu-icons"></i>Язык R</a></li> <li id="menu-item-136637" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/objective-c/" title="Оbjective-С" class="main-menu-a"><i class="icon- menu-icons"></i>Оbjective-С</a></li> <li id="menu-item-136638" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/perl/" title="Perl" class="main-menu-a"><i class="icon- menu-icons"></i>Perl</a></li> <li id="menu-item-136639" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/dot-net/" title=".NET" class="main-menu-a"><i class="icon- menu-icons"></i>.NET</a></li> <li id="menu-item-136640" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/django/" title="Django" class="main-menu-a"><i class="icon- menu-icons"></i>Django</a></li> <li id="menu-item-136641" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/docker/" title="Docker" class="main-menu-a"><i class="icon- menu-icons"></i>Docker</a></li> <li id="menu-item-136642" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/mysql/" title="MySQL" class="main-menu-a"><i class="icon- menu-icons"></i>MySQL</a></li> <li id="menu-item-136643" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/node-js/" title="Node.js" class="main-menu-a"><i class="icon- menu-icons"></i>Node.js</a></li> <li id="menu-item-136644" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/react/" title="React" class="main-menu-a"><i class="icon- menu-icons"></i>React</a></li> <li id="menu-item-136645" class="menu-item menu-item-type-custom menu-item-object-custom tag-menu-item navigation__dropdown-item"><a href="/tag/webassembly/" title="WebAssembly" class="main-menu-a"><i class="icon- menu-icons"></i>WebAssembly</a></li>
+</ul>
+</li>
+<li class="hide-on-desktop dropdown menu-item">
+ <a href="/ad/" class="main-menu-a main-menu__advertising">Реклама на tproger.ru</a>
+</li>
+<li class="hide-on-desktop last-main-menu menu-item">
+<span class="main-menu-a">Контакты для сотрудничества:</span>
+<span class="main-menu-a">Телефон:&nbsp;<a href="tel:+7 916 559-71-10">+7 916 559-71-10</a></span>
+<span class="main-menu-a">E-mail:&nbsp;<a href="mailto:sales@tproger.ru">sales@tproger.ru</a></span>
+</li>
+</ul> </div>
+</div>
+<div id="header-logo">
+<a id="main-logo" class="header-item header-clickable" href="https://tproger.ru"> <img src="/wp-content/themes/bliss/assets/img/logo.svg" alt="Логотип Tproger" width="30" height="30">
+<span id="logo-text" class="hide-on-mobile hide-on-narrow">Tproger</span>
+</a> </div>
+<div class="header-right">
+<a id="search-button" href="/search/" class="header-item header-clickable icon-search" title="Поиск по сайту"></a>
+<a id="tproger-login-button" class="header-item hoverable"></a>
+</div>
+</nav>
+<div id="tproger-login"></div>
+<div class="search">
+<div class="search__container">
+<form method="get" action="/search" class="search__form">
+<input name="searchid" type="hidden" value="2415386">
+<input name="text" maxlength="128" class="search__input" placeholder="Поиск по сайту">
+<input name="web" type="hidden" value="0">
+<button class="search__submit icon-search hoverable" type="submit"></button>
+</form>
+<div class="search__header">Популярные темы</div>
+<div class="search__popular">
+<a class="search__popular_link" href="/tag/python/">Python</a><a class="search__popular_link" href="/tag/cpp/">С++</a><a class="search__popular_link" href="/tag/javascript/">JavaScript</a><a class="search__popular_link" href="/tag/web/">Web-разработка</a><a class="search__popular_link" href="/category/problems/">Задачи с разбором</a><a class="search__popular_link" href="/tag/gamedev/">Разработка игр</a><a class="search__popular_link" href="/category/quiz/">Тесты и викторины</a><a class="search__popular_link" href="/tag/for-beginners/">Для начинающих</a> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="header-searchbox" id="searchbox" style="display: none;">
+<form method="get" action="/search">
+<div class="header-searchbox-input-wrapper">
+<input name="searchid" type="hidden" value="2415386">
+<input name="text" maxlength="128" class="header-searchbox-input" placeholder="Что ищем?">
+<input name="web" type="hidden" value="0">
+<span class="header-searchbox-input-cancel icon-close"></span>
+</div>
+</form>
+</div>
+</header>
+
+
+<div class="section-head">
+<div class="section-head-content windowed">
+<div class="section-head-left"><img width="50" height="50" src="https://tproger.ru/s3/uploads/2020/01/iconfinder_code-programming-javascript-software-develop-command-language_652581-50x50.png" class="section-head-img" alt="JavaScript" srcset="https://tproger.ru/s3/uploads/2020/01/iconfinder_code-programming-javascript-software-develop-command-language_652581-50x50.png, https://tproger.ru/s3/uploads/2020/01/iconfinder_code-programming-javascript-software-develop-command-language_652581-90x90.png 1.5x, https://tproger.ru/s3/uploads/2020/01/iconfinder_code-programming-javascript-software-develop-command-language_652581-150x150.png 2x, https://tproger.ru/s3/uploads/2020/01/iconfinder_code-programming-javascript-software-develop-command-language_652581-150x150.png 3x" data-id="124516" /> <div class="section-head-left-text">
+<h1 class="section-head-title">JavaScript</h1>
+<h2 class="section-head-subtitle"><p>Руководства и новости по JS-фреймворкам, библиотекам и платформам, написание игр на JS, обучение, трюки, разборы успешных проектов</p>
+</h2>
+</div>
+</div>
+</div>
+</div>
+<div id="main" class="windowed">
+<div id="above-content-container" data-loaded="no"><a id="above-content-link" class="mobile-show-on-idle" href="tg://resolve?domain=tproger_official" rel="nofollow"><div id="above-content-button" class="box"><i id="above-content-image" class="colored icon-telegram"></i>Читать нас в Telegram</div></a></div> <div id="tproger_ads_widget-4" style="display:none;" class='tproger-widget float-widget-container subscription-widget' data-ad data-type="2">
+<div class="float-widget">
+<a class="float-widget-a" href="" target="_blank" rel="noopener">
+<div class="float-widget-blocks">
+<div class="box float-widget-text">Tproger.ru</div>
+<div class="float-widget-btn float-widget-positive-btn"></div>
+<div class="float-widget-btn float-widget-negative-btn">Закрыть</div>
+</div>
+<div class="float-widget-close-btn" id="float-widget-close-btn" style="display:none;">✕</div>
+<img class="no-lazy-img float-widget-img lazy" src="" decoding="async">
+</a>
+</div>
+</div>
+<div id="primary" class="row right_side">
+<div id="content" class="margin" role="main">
+<div id="main_columns" class="columns masonry main-page">
+<div class="news-main box main-column-item"> <div class="news-row ">
+<div class="news-date"><span class="news-day">26 апреля</span>, вчера</div> <a href="https://tproger.ru/news/issledovanie-razmer-kommjuniti-u-14-samyh-populjarnyh-jazykov-programmirovanija/" class="news-link hoverable">Исследование: размер коммьюнити у 14 самых популярных языков программирования</a>
+</div> <div class="news-row ">
+<div class="news-date"><span class="news-day">Больше недели назад</span></div> <a href="https://tproger.ru/news/v-google-chrome-i-microsoft-edge-nashli-aktivnuju-ujazvimost-nulevogo-dnja/" class="news-link hoverable">В Google Chrome и Microsoft Edge нашли активную уязвимость нулевого дня</a>
+</div> <div class="news-row ">
+<a href="https://tproger.ru/news/opublikovan-top-9-samyh-populjarnyh-jazykov-programmirovanija-s-vysokimi-zarplatami/" class="news-link hoverable">Опубликован топ-9 самых популярных языков программирования с высокими зарплатами</a>
+</div> <div class="news-row ">
+<a href="https://tproger.ru/news/ujazvimost-v-chipe-apple-m1-pozvolila-nabljudat-za-setevoj-aktivnostju-polzovatelej/" class="news-link hoverable">Уязвимость в чипе Apple M1 позволила наблюдать за сетевой активностью пользователей</a>
+</div> <div class="news-row ">
+<a href="https://tproger.ru/news/hakery-ispolzovali-azbuku-morze-dlja-massovoj-krazhi-parolej/" class="news-link hoverable">Хакеры использовали азбуку Морзе для массовой кражи паролей</a>
+</div> <div class="news-row news-hidden">
+<a href="https://tproger.ru/news/javascript-html-i-css-ispolzovali-dlja-simuljacii-linux-v-brauzere/" class="news-link hoverable">JavaScript, HTML и CSS использовали для симуляции Linux в браузере</a>
+</div> <div class="news-row news-hidden">
+<a href="https://tproger.ru/news/video-js-algoritm-ishhet-vyhod-iz-sgenerirovannogo-na-hodu-labirinta/" class="news-link hoverable">Видео: JS-алгоритм ищет выход из сгенерированного на ходу лабиринта</a>
+</div> <div id="news-actions">
+<div id="news-show-more" class="news-action hoverable">Показать ещё<span class="icon-down-open vertical-middle"></span></div>
+<a id="news-show-all" href="/news/?tag=javascript" rel="nofollow" class="news-action hoverable" style="display: none">Все новости по теме <span class="icon-right vertical-middle"></span>
+</a>
+<div id="news-collapse" class="news-action hoverable" style="display: none">Свернуть<span class="icon-up-open"></span></div>
+</div> </div>
+<article id="post-157773" class="box item post-157773 post type-post status-publish format-standard has-post-thumbnail hentry category-translations tag-javascript post-icon">
+<a href="https://tproger.ru/translations/alternativa-if-else-i-switch-literaly-obektov-v-javascript/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Альтернатива if/else и switch: литералы объектов в JavaScript</h2>
+</div>
+<div class="entry-content">
+<p>С помощью литералов объектов в JavaScript можно описывать сложные и громоздкие условия. Рассказываем, как это сделать и не получить undefined.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="157773"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="157773"></div>
+<div class="tproger-mark" data-loaded="no" data-post="157773"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #ed6b40" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img width="75" height="90" src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;75px&quot; viewBox=&quot;0 0 75 90&quot;%3E%3C/svg%3E" alt="Обложка: Альтернатива if/else и switch: литералы объектов в JavaScript" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/04/iconfinder-icon-34-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/04/iconfinder-icon-34-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/04/iconfinder-icon-34-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/04/iconfinder-icon-34-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-153884" class="box item post-153884 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-css tag-django tag-html tag-java tag-javascript tag-node-js tag-php tag-backend tag-for-beginners tag-frontend tag-cheatsheets post-icon">
+<a href="https://tproger.ru/articles/10-shpargalok-dlja-veb-razrabotchika/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">10 шпаргалок для веб-разработчика</h2>
+</div>
+<div class="entry-content">
+<p>В этих шпаргалках собраны подсказки по HTML, CSS, JavaScript, PHP, Django, Spring Boot и всему, что нужно знать веб-разработчику.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="153884"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="153884"></div>
+<div class="tproger-mark" data-loaded="no" data-post="153884"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #faf0bd" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img width="90" height="90" src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;90px&quot; viewBox=&quot;0 0 90 90&quot;%3E%3C/svg%3E" alt="Обложка: 10 шпаргалок для веб-разработчика" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/04/iconfinder_browser_2032023-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/04/iconfinder_browser_2032023-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/04/iconfinder_browser_2032023-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/04/iconfinder_browser_2032023-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<div id="right_event_job_widget-16" data-type="10" data-wtype="feed" data-btn-title="Все события и курсы" data-btn-url="/events/" data-utm="feed-levelup-main-page_tag&utm_medium=tag&utm_term=JavaScript" data-rbtn-title="Добавить" data-rbtn-url="/ad/events/" data-event class="box tproger-event-job-widget subscription-widget widget-feed-type" style="width:100%;"><div class="widget-list"><a href="https://tproger.ru/events/kurs-osnovy-web-razrabotki-s-nulja/?utm_source=feed-levelup-main-page_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2020/12/300300_tilda3284698-50x50.png" data-srcset="https://tproger.ru/s3/uploads/2020/12/300300_tilda3284698-50x50.png, https://tproger.ru/s3/uploads/2020/12/300300_tilda3284698-50x50.png 1.5x, https://tproger.ru/s3/uploads/2020/12/300300_tilda3284698-90x90.png 2x, https://tproger.ru/s3/uploads/2020/12/300300_tilda3284698-90x90.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Курс «Основы Web-разработки с нуля»</div><div class="widget-list-description">Постоянный доступ, онлайн, от 19&thinsp;000 до 30&thinsp;000&thinsp;₽</div></div></div></a><a href="https://tproger.ru/events/full-stack-web-developer-udacity/?utm_source=feed-levelup-main-page_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2019/07/udacity-logo-1-50x50.png" data-srcset="https://tproger.ru/s3/uploads/2019/07/udacity-logo-1-50x50.png, https://tproger.ru/s3/uploads/2019/07/udacity-logo-1-50x50.png 1.5x, https://tproger.ru/s3/uploads/2019/07/udacity-logo-1-90x90.png 2x, https://tproger.ru/s3/uploads/2019/07/udacity-logo-1-90x90.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Специализация Full Stack Web Developer</div><div class="widget-list-description">Постоянный доступ, онлайн, от 399 до 1436&thinsp;$</div></div></div></a><a href="https://tproger.ru/events/front-end-web-developer-w3c-edx/?utm_source=feed-levelup-main-page_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2019/09/edx-logo-header-50x50.png" data-srcset="https://tproger.ru/s3/uploads/2019/09/edx-logo-header-50x50.png, https://tproger.ru/s3/uploads/2019/09/edx-logo-header-50x50.png 1.5x, https://tproger.ru/s3/uploads/2019/09/edx-logo-header-90x90.png 2x, https://tproger.ru/s3/uploads/2019/09/edx-logo-header-90x90.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Специализация Frontend Web Developer</div><div class="widget-list-description">Постоянный доступ, онлайн, до 555&thinsp;$</div></div></div></a><a href="https://tproger.ru/events/javascript-for-beginners-stepik/?utm_source=feed-levelup-main-page_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2019/09/stepik-logo-50x50.png" data-srcset="https://tproger.ru/s3/uploads/2019/09/stepik-logo-50x50.png, https://tproger.ru/s3/uploads/2019/09/stepik-logo-50x50.png 1.5x, https://tproger.ru/s3/uploads/2019/09/stepik-logo-90x90.png 2x, https://tproger.ru/s3/uploads/2019/09/stepik-logo-90x90.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Курс «JavaScript для начинающих»</div><div class="widget-list-description">Постоянный доступ, онлайн, беcплатно</div></div></div></a><div class="widget-list-footer"><a href="/events/?utm_source=feed-levelup-main-page_tag" class="show-more-widget hoverable">Все события и курсы<span class="icon-right-open vertical-middle"></span></a><div class="widget-list-footer-right"> <a href="/ad/events/" class="btn bluth tproger margin-top-10">Добавить</a> </div></div></div></div>
+<article id="post-151768" class="box item post-151768 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-typescript tag-code-style post-icon">
+<a href="https://tproger.ru/articles/tochka-s-zapjatoj-v-javascript-typescript-za-i-protiv/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Точка с запятой в JavaScript/TypeScript: за и против</h2>
+</div>
+<div class="entry-content">
+<p>Нельзя просто так взять и поменять свои привычки. Рассказываем, почему существуют две точки зрения на проблему точек с запятой в JavaScript.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="151768"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="151768"></div>
+<div class="tproger-mark" data-loaded="no" data-post="151768"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #c6c6ff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img width="73" height="90" src="https://tproger.ru/s3/uploads/2021/03/iconfinder-icon-21-cover-icon.png" srcset="https://tproger.ru/s3/uploads/2021/03/iconfinder-icon-21-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/03/iconfinder-icon-21-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/03/iconfinder-icon-21-cover-icon-4x.png 4x" class="skip-lazy" alt="Обложка: Точка с запятой в JavaScript/TypeScript: за и против" itemprop="image url" decoding="sync"> </div> </article>
+<article id="post-150459" class="box item post-150459 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-python tag-career tag-ugc post-icon">
+<a href="https://tproger.ru/articles/moja-istorija-v-it-kak-samostojatelno-izuchit-javascript-i-python-chtoby-osushhestvit-svoju-mechtu/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Моя история в IT: как самостоятельно изучить JavaScript и Python, чтобы осуществить свою мечту <a href="/editor/?utm_source=ugc-icon" class="icon-ugc ugc-marker" title="Пост пользователя. Вы можете создать свой"></a>
+</h2>
+</div>
+<div class="entry-content">
+<p>Из этой статьи вы узнаете, как изучить Python и JavaScript самостоятельно. Личный опыт разработчика, рекомендации книг и онлайн-курсов.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="150459"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="150459"></div>
+<div class="tproger-mark" data-loaded="no" data-post="150459"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #FFDFCB" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img width="90" height="90" src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;90px&quot; viewBox=&quot;0 0 90 90&quot;%3E%3C/svg%3E" alt="Обложка: Моя история в IT: как самостоятельно изучить JavaScript и Python, чтобы осуществить свою мечту" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/03/story-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/03/story-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/03/story-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/03/story-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<div id="right_event_job_widget-24" data-type="1" data-wtype="feed" data-btn-title="Все вакансии" data-btn-url="/jobs/" data-utm="feed-jobs-widget_tag&utm_medium=tag&utm_term=JavaScript" data-rbtn-title="Разместить" data-rbtn-url="/ad/jobs/?utm_referrer=feed#offer" data-job class="box tproger-event-job-widget subscription-widget widget-feed-type" style="width:100%;"><div class="widget-list"><a href="https://tproger.ru/jobs/sotrudnik-otdela-prodazh/?utm_source=feed-jobs-widget_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2017/04/tp_circle_big-80x80.png" data-srcset="https://tproger.ru/s3/uploads/2017/04/tp_circle_big-80x80.png, https://tproger.ru/s3/uploads/2017/04/tp_circle_big-80x80.png 1.5x, https://tproger.ru/s3/uploads/2017/04/tp_circle_big-80x80.png 2x, https://tproger.ru/s3/uploads/2017/04/tp_circle_big-150x150.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Сотрудник отдела продаж</div><div class="widget-list-item-caption__salary">От 40&thinsp;000&nbsp;₽</div><div class="widget-list-description"><span class="meta-text-description__locations">Москва, можно удалённо</span>, <span class="meta-text-description__employment-type">Полная занятость</span></div></div></div></a><a href="https://tproger.ru/jobs/project-manager/?utm_source=feed-jobs-widget_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2021/04/Piano-logo-no-tm-50x50.png" data-srcset="https://tproger.ru/s3/uploads/2021/04/Piano-logo-no-tm-50x50.png, https://tproger.ru/s3/uploads/2021/04/Piano-logo-no-tm-50x50.png 1.5x, https://tproger.ru/s3/uploads/2021/04/Piano-logo-no-tm-90x90.png 2x, https://tproger.ru/s3/uploads/2021/04/Piano-logo-no-tm-90x90.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Project Manager</div><div class="widget-list-item-caption__salary">По итогам собеседования</div><div class="widget-list-description"><span class="meta-text-description__locations">Казань</span>, <span class="meta-text-description__employment-type">Полная занятость</span></div></div></div></a><a href="https://tproger.ru/jobs/blockchain-programmist/?utm_source=feed-jobs-widget_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2018/11/mytona-logo-50x50.png" data-srcset="https://tproger.ru/s3/uploads/2018/11/mytona-logo-50x50.png, https://tproger.ru/s3/uploads/2018/11/mytona-logo-50x50.png 1.5x, https://tproger.ru/s3/uploads/2018/11/mytona-logo-90x90.png 2x, https://tproger.ru/s3/uploads/2018/11/mytona-logo-90x90.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Blockchain программист</div><div class="widget-list-item-caption__salary">По итогам собеседования</div><div class="widget-list-description"><span class="meta-text-description__locations">Удалённо</span>, <span class="meta-text-description__employment-type">Полная занятость</span></div></div></div></a><a href="https://tproger.ru/jobs/frontend-razrabotchik-vue-electron-cordova/?utm_source=feed-jobs-widget_tag&utm_medium=tag&utm_term=JavaScript"><div class="widget-list-item hoverable"><div class="widget-list-item-left"><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2230px%22%20viewBox=%220%200%2030%2030%22%3E%3C/svg%3E" sizes="" class="widget-list-item-image lazy" alt="" width="30" height="30" data-src="https://tproger.ru/s3/uploads/2021/04/logo-300-50x50.png" data-srcset="https://tproger.ru/s3/uploads/2021/04/logo-300-50x50.png, https://tproger.ru/s3/uploads/2021/04/logo-300-50x50.png 1.5x, https://tproger.ru/s3/uploads/2021/04/logo-300-90x90.png 2x, https://tproger.ru/s3/uploads/2021/04/logo-300-90x90.png 3x" decoding="async"></div><div class="widget-list-item-right"><div class="widget-list-item-caption">Frontend-разработчик (Vue / Electron / Cordova)</div><div class="widget-list-item-caption__salary">По итогам собеседования</div><div class="widget-list-description"><span class="meta-text-description__locations">Москва, можно удалённо</span>, <span class="meta-text-description__employment-type">Полная занятость</span></div></div></div></a><div class="widget-list-footer"><a href="/jobs/?utm_source=feed-jobs-widget_tag" class="show-more-widget hoverable">Все вакансии<span class="icon-right-open vertical-middle"></span></a><div class="widget-list-footer-right"> <a href="/ad/jobs/?utm_referrer=feed#offer" class="btn bluth tproger margin-top-10">Разместить</a> </div></div></div></div>
+<article id="post-148149" class="box item post-148149 post type-post status-publish format-standard has-post-thumbnail hentry category-translations tag-javascript tag-web post-icon">
+<a href="https://tproger.ru/translations/upravlenie-pamjatju-v-javascript/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Управление памятью в JavaScript</h2>
+</div>
+<div class="entry-content">
+<p>Статья об управлении памятью и принципах работы сборщика мусора, а также о том, как избежать самых распространенных видов утечек памяти.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="148149"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="148149"></div>
+<div class="tproger-mark" data-loaded="no" data-post="148149"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #e0eeff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Управление памятью в JavaScript" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-51-cover-icon-1.png" data-srcset="https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-51-cover-icon-1-2x.png 2x, https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-51-cover-icon-1-3x.png 3x, https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-51-cover-icon-1-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-148106" class="box item post-148106 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-frameworks post-icon">
+<a href="https://tproger.ru/articles/10-javascript-frejmvorkov-kotorye-stoit-vyuchit-v-2021-godu/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">10 JavaScript-фреймворков, которые стоит выучить в 2021 году</h2>
+</div>
+<div class="entry-content">
+<p>Выбрать лучший — сложная задача, особенно для новичков. Представляем список JS-фреймворков, на которые стоит обратить внимание в 2021 году.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="148106"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="148106"></div>
+<div class="tproger-mark" data-loaded="no" data-post="148106"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #f2f2eb" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: 10 JavaScript-фреймворков, которые стоит выучить в 2021 году" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-5-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-5-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-5-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/02/iconfinder-icon-5-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-145932" class="box item post-145932 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-react tag-frontend post-icon">
+<a href="https://tproger.ru/articles/chto-nuzhno-znat-react-razrabotchiku-v-2021-godu/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Что нужно знать React-разработчику в 2021 году</h2>
+</div>
+<div class="entry-content">
+<p>Инструменты и ключевые навыки, которыми нужно владеть React-разработчику в 2021 году, чтобы быть востребованным специалистом.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="145932"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="145932"></div>
+<div class="tproger-mark" data-loaded="no" data-post="145932"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 84px; background-color: #b5eaff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Что нужно знать React-разработчику в 2021 году" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/02/iconfinder_reactjs_javascript_library_atom_atomic_react_5362908-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/02/iconfinder_reactjs_javascript_library_atom_atomic_react_5362908-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/02/iconfinder_reactjs_javascript_library_atom_atomic_react_5362908-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/02/iconfinder_reactjs_javascript_library_atom_atomic_react_5362908-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-145514" class="box item post-145514 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-asinhronnoe-programmirovanie tag-web post-icon">
+<a href="https://tproger.ru/articles/uglubljaemsja-v-javascript-vsjo-li-mozhet-async-await-ili-kogda-ispolzovat-promise/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Углубляемся в JavaScript: всё ли может async/await, или когда использовать Promise</h2>
+</div>
+<div class="entry-content">
+<p>Разбираемся, что из себя представляют async/await и Promise, какие у них плюсы и минусы и что нужно использовать в зависимости от ситуации.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="145514"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="145514"></div>
+<div class="tproger-mark" data-loaded="no" data-post="145514"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #3c6d96" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Углубляемся в JavaScript: всё ли может async/await, или когда использовать Promise" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-47-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-47-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-47-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-47-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-144806" class="box item post-144806 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-cheatsheets post-icon">
+<a href="https://tproger.ru/articles/metody-strok-v-javascript-shpargalka-dlja-nachinajushhih/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Методы строк в JavaScript: простая шпаргалка с примерами</h2>
+</div>
+<div class="entry-content">
+<p>Не обязательно знать все встроенные методы строк JS наизусть. Достаточно помнить об основных возможностях, которые они предоставляют.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="144806"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="144806"></div>
+<div class="tproger-mark" data-loaded="no" data-post="144806"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #FFD2B9" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Методы строк в JavaScript: простая шпаргалка с примерами" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/js-strings-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/js-strings-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/js-strings-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/js-strings-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-144921" class="box item post-144921 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-web tag-tools post-icon">
+<a href="https://tproger.ru/articles/sozdajom-sobstvennye-pravila-dlja-eslint/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Создаём собственные правила для ESLint</h2>
+</div>
+<div class="entry-content">
+<p>Опыт написания своих правил для ESLint — инструмента, который позволяет выявлять ошибки и поддерживать единый стиль кода.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="144921"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="144921"></div>
+<div class="tproger-mark" data-loaded="no" data-post="144921"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 74px; background-color: #cdecf7" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Создаём собственные правила для ESLint" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-38-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-38-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-38-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-38-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-144707" class="box item post-144707 post type-post status-publish format-standard has-post-thumbnail hentry category-problems tag-javascript tag-for-amateurs tag-job-interview post-icon">
+<a href="https://tproger.ru/problems/sobesedovanie-na-poziciju-middle-javascript-razrabotchika-primery-zadach-i-neobhodimye-znanija/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Собеседование на позицию Middle JavaScript разработчика: примеры задач и необходимые знания</h2>
+</div>
+<div class="entry-content">
+<p>Разбор нескольких задач, с которыми вы можете столкнуться при прохождении собеседования, а также общие советы для интервью.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="144707"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="144707"></div>
+<div class="tproger-mark" data-loaded="no" data-post="144707"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 76px; background-color: #aae0ff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Собеседование на позицию Middle JavaScript разработчика: примеры задач и необходимые знания" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-33-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-33-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-33-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-33-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-144447" class="box item post-144447 post type-post status-publish format-standard has-post-thumbnail hentry category-digest tag-android tag-cpp tag-data-science tag-ios tag-javascript tag-php tag-python tag-gamedev tag-frontend tag-c-language post-icon">
+<a href="https://tproger.ru/digest/gde-obshhajutsja-razrabotchiki-russkojazychnye-chaty-programmistov/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Где общаются разработчики: русскоязычные чаты программистов</h2>
+</div>
+<div class="entry-content">
+<p>Сделали подборку чатов программистов в Slack, Telegram и Gitter.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="144447"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="144447"></div>
+<div class="tproger-mark" data-loaded="no" data-post="144447"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #c4ffff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Где общаются разработчики: русскоязычные чаты программистов" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-7-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-7-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-7-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-7-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-144016" class="box item post-144016 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-job-interview tag-frontend post-icon">
+<a href="https://tproger.ru/articles/primery-zadach-po-javascript-dlja-podgotovki-dzhuna-k-sobesedovaniju-po-frontendu/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Примеры задач по JavaScript для подготовки джуна к собеседованию по фронтенду</h2>
+</div>
+<div class="entry-content">
+<p>В материале разработчик приводит несколько задач, которые чаще всего попадаются на позицию Junior/Middle Frontend</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="144016"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="144016"></div>
+<div class="tproger-mark" data-loaded="no" data-post="144016"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #5193ba" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Примеры задач по JavaScript для подготовки джуна к собеседованию по фронтенду" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-23-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-23-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-23-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/iconfinder-icon-23-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-144125" class="box item post-144125 post type-post status-publish format-standard has-post-thumbnail hentry category-quiz tag-javascript tag-typescript post-icon">
+<a href="https://tproger.ru/quiz/test-kak-horosho-vy-razbiraetes-v-trendah-javascript/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Тест: как хорошо вы разбираетесь в трендах JavaScript?</h2>
+</div>
+<div class="entry-content">
+<p>Какие фреймворки и инструменты JavaScript были популярными в 2020 году и на что обратить внимание в 2021 году.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="144125"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="144125"></div>
+<div class="tproger-mark" data-loaded="no" data-post="144125"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #7584D2" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Тест: как хорошо вы разбираетесь в трендах JavaScript?" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/js-trends-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/js-trends-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/js-trends-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/js-trends-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-143810" class="box item post-143810 post type-post status-publish format-video has-post-thumbnail hentry category-video tag-css tag-html tag-javascript tag-for-beginners post_format-post-format-video post-icon">
+<a href="https://tproger.ru/video/veb-razrabotka-dlja-nachinajushhih-besplatnyj-videokurs-kotoryj-pomozhet-ocenit-svoi-sily/?autoplay=1" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Веб-разработка для начинающих: бесплатный видеокурс, который поможет оценить свои силы</h2>
+</div>
+<div class="entry-container">
+<div class="entry-content">
+<p>Видеокурс для начинающих, который поможет понять, подходит ли вам веб-разработка, и покажет, с чего начать обучение.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="143810"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="143810"></div>
+<div class="tproger-mark" data-loaded="no" data-post="143810"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon entry-icon-video" style="min-height: 82px; background-color: #FFBF73" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Веб-разработка для начинающих: бесплатный видеокурс, который поможет оценить свои силы" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2021/01/front-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2021/01/front-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2021/01/front-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2021/01/front-cover-icon-4x.png 4x" class=" lazy" decoding="async"><div class="play-btn"><div class="play-btn-tri"></div></div> </div> </article>
+<article id="post-141479" class="box item post-141479 post type-post status-publish format-standard hentry category-articles tag-javascript tag-python tag-swift tag-toplang2020 tag-programming-languages">
+<a href="https://tproger.ru/articles/battl-jazykov-programmirovanija-2022-zavershilsja/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Баттл языков программирования 2020 завершился!</h2>
+</div>
+<div class="entry-content">
+<p>Вчера прошел финал баттла языков программирования 2020. И теперь, спустя неделю неожиданных и не очень побед и поражений, мы можем объявить победителей! Python — cамый любимый язык наших читателей. Он…</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="141479"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="141479"></div>
+<div class="tproger-mark" data-loaded="no" data-post="141479"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article id="post-141324" class="box item post-141324 post type-post status-publish format-standard hentry category-articles tag-cpp tag-javascript tag-python tag-swift tag-toplang2020 tag-programming-languages">
+<a href="https://tproger.ru/articles/final-battla-jazykov-programmirovanija-2020-uzhe-segodnja/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Финал баттла языков программирования 2020 уже сегодня!</h2>
+</div>
+<div class="entry-content">
+<p>По результатам вчерашнего полуфинала образовались две пары финалистов. За первое и второе место поборются: Python и JavaScript. А за третье и четвёртое: Swift и C++. Голосуйте за любимый язык и…</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="141324"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="141324"></div>
+<div class="tproger-mark" data-loaded="no" data-post="141324"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article id="post-141264" class="box item post-141264 post type-post status-publish format-standard hentry category-articles tag-cpp tag-javascript tag-python tag-swift tag-toplang2020 tag-programming-languages">
+<a href="https://tproger.ru/articles/polufinal-bitvy-jazykov-programmirovanija-2020/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Полуфинал битвы языков программирования 2020</h2>
+</div>
+<div class="entry-content">
+<p>Победителями вчерашней схватки стали JavaScript и Python. В полуфинале участвуют: Swift/JavaScript и C++/Python. Напоминаем, выбирайте тот язык, который вы больше любите.  Ещё чуть-чуть и мы узнаем, кто будет победителем. Голосование…</p>
+
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="141264"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="141264"></div>
+<div class="tproger-mark" data-loaded="no" data-post="141264"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article id="post-141207" class="box item post-141207 post type-post status-publish format-standard hentry category-articles tag-c-sharp tag-javascript tag-python tag-sql tag-toplang2020 tag-programming-languages">
+<a href="https://tproger.ru/articles/shestoj-raund-bitvy-jazykov-programmirovanija-2020-nachalsja/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Шестой раунд битвы языков программирования 2020 начался!</h2>
+</div>
+<div class="entry-content">
+<p>Вчерашний батл был напряжённым: Swift и Assebmler шли ноздря в ноздрю, но в итоге Swift немного обогнал оппонента. Отрыв между C++ и Java существенно больше, С++ победил! Сегодня участвуют следующие…</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="141207"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="141207"></div>
+<div class="tproger-mark" data-loaded="no" data-post="141207"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article id="post-140825" class="box item post-140825 post type-post status-publish format-standard has-post-thumbnail hentry category-explain tag-javascript tag-for-beginners post-icon">
+<a href="https://tproger.ru/explain/kak-sozdat-obekt-dlja-obrabotki-sobytij-v-javascript/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Как создать объект для обработки событий в JavaScript?</h2>
+</div>
+<div class="entry-content">
+<p>Чтобы создавать интерактивные веб-приложения нужно использовать события JavaScript. Как они работают?</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="140825"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="140825"></div>
+<div class="tproger-mark" data-loaded="no" data-post="140825"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #fbffc4" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Как создать объект для обработки событий в JavaScript?" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/12/event-listener-icon-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/12/event-listener-icon-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/12/event-listener-icon-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/12/event-listener-icon-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-140889" class="box item post-140889 post type-post status-publish format-standard hentry category-articles tag-c-sharp tag-golang tag-javascript tag-toplang2020 tag-programming-languages">
+<a href="https://tproger.ru/articles/nachalsja-chetvjortyj-raund-bitvy-jazykov-programmirovanija-2020/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Начался четвёртый раунд битвы языков программирования 2020!</h2>
+</div>
+<div class="entry-content">
+<p>Результаты прошлого раунда вас не удивят: за Python голосовали примерно в шесть раз чаще чем за Ruby, а SQL набрал в два раза больше голосов чем TypeScript. В этом раунде…</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="140889"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="140889"></div>
+<div class="tproger-mark" data-loaded="no" data-post="140889"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article id="post-140509" class="box item post-140509 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-interesting-projects post-icon">
+<a href="https://tproger.ru/articles/estimator-pokazhet-naskolko-bystree-stanet-vash-sajt-pri-perehode-na-modern-javascript/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">EStimator: покажет насколько быстрее станет ваш сайт, при переходе на Modern JavaScript</h2>
+</div>
+<div class="entry-content">
+<p>Замена устаревшего JS синтаксиса позволит ускорить работу вашего сайта и уменьшить время его загрузки. Теперь вы можете узнать насколько.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="140509"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="140509"></div>
+<div class="tproger-mark" data-loaded="no" data-post="140509"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 87px; background-color: #aaffff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: EStimator: покажет насколько быстрее станет ваш сайт, при переходе на Modern JavaScript" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/12/js-icon-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/12/js-icon-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/12/js-icon-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/12/js-icon-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-140042" class="box item post-140042 post type-post status-publish format-standard hentry category-articles tag-dot-net tag-cpp tag-golang tag-java tag-javascript tag-kotlin tag-pascal tag-php tag-python tag-ruby tag-sql tag-swift tag-typescript tag-toplang2020 tag-asm tag-programming-languages">
+<a href="https://tproger.ru/articles/primite-uchastie-v-battle-jazykov-programmirovanija-2020-start-uzhe-zavtra/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Примите участие в баттле языков программирования 2020. Старт уже завтра!</h2>
+</div>
+<div class="entry-content">
+<p>В то время как Java и язык Си меняются местами на вершине рейтинга TIOBE, мы решили выяснить, какие языки программирования, наши подписчики любят больше всего. Завтра начинается баттл языков программирования…</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="140042"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="140042"></div>
+<div class="tproger-mark" data-loaded="no" data-post="140042"></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article id="post-140255" class="box item post-140255 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-web tag-for-beginners tag-tools tag-frontend post-icon">
+<a href="https://tproger.ru/articles/izuchenie-vue-js-v-2021-godu-dorozhnaja-karta-razrabotchika/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Изучение Vue.js в 2021 году: дорожная карта разработчика</h2>
+</div>
+<div class="entry-content">
+<p>Хотите начать изучение Vue.js в 2021 году? В этом поможет дорожная карта с включёнными в неё этапами изучения и необходимыми инструментами.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="140255"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="140255"></div>
+<div class="tproger-mark" data-loaded="no" data-post="140255"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 77px; background-color: #d4fff4" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Изучение Vue.js в 2021 году: дорожная карта разработчика" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/12/vue-js-roadmap-2021-cover-icon-1.png" data-srcset="https://tproger.ru/s3/uploads/2020/12/vue-js-roadmap-2021-cover-icon-1-2x.png 2x, https://tproger.ru/s3/uploads/2020/12/vue-js-roadmap-2021-cover-icon-1-3x.png 3x, https://tproger.ru/s3/uploads/2020/12/vue-js-roadmap-2021-cover-icon-1-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-45644" class="box item post-45644 post type-post status-publish format-standard has-post-thumbnail hentry category-translations tag-javascript tag-web tag-for-beginners post-icon">
+<a href="https://tproger.ru/translations/how-to-handle-undefined-in-javascript/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">7 советов по обработке undefined в JavaScript</h2>
+</div>
+<div class="entry-content">
+<p>undefined в JavaScript — что за значение, чем вызвано и как его обработать? Также рассмотрим главные отличия undefined и null.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="45644"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="45644"></div>
+<div class="tproger-mark" data-loaded="no" data-post="45644"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #a1c5ff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: 7 советов по обработке undefined в JavaScript" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/12/undefined_javascript-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/12/undefined_javascript-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/12/undefined_javascript-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/12/undefined_javascript-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-139134" class="box item post-139134 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-react tag-web tag-for-beginners tag-tools tag-frontend post-icon">
+<a href="https://tproger.ru/articles/kak-stat-react-razrabotchikom-v-2021-dorozhnaja-karta/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Как стать React-разработчиком в 2021: дорожная карта</h2>
+</div>
+<div class="entry-content">
+<p>Хотите знать, как стать React-разработчиком в 2021? Держите дорожную карту, которая собрала must-have темы и инструменты.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="139134"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="139134"></div>
+<div class="tproger-mark" data-loaded="no" data-post="139134"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #ccf8ff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Как стать React-разработчиком в 2021: дорожная карта" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/12/react-roadmap-2021-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/12/react-roadmap-2021-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/12/react-roadmap-2021-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/12/react-roadmap-2021-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-138536" class="box item post-138536 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-visualization tag-frontend post-icon">
+<a href="https://tproger.ru/articles/top-5-instrumentov-javascript-dlja-vizualizacii-finansovyh-dannyh/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Топ-5 инструментов JavaScript для визуализации финансовых данных</h2>
+</div>
+<div class="entry-content">
+<p>Разбор лидеров среди JavaScript-библиотек в области визуализации данных.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="138536"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="138536"></div>
+<div class="tproger-mark" data-loaded="no" data-post="138536"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #b7d1ff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Топ-5 инструментов JavaScript для визуализации финансовых данных" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/11/js-tools-for-data-visualization-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/11/js-tools-for-data-visualization-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/11/js-tools-for-data-visualization-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/11/js-tools-for-data-visualization-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-135508" class="box item post-135508 post type-post status-publish format-standard has-post-thumbnail hentry category-translations tag-html tag-javascript post-icon">
+<a href="https://tproger.ru/translations/script-execution-order/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Порядок выполнения скриптов в HTML. Тег script и атрибуты async, defer, module, nomodule и src</h2>
+</div>
+<div class="entry-content">
+<p>Рассмотрим как атрибуты тега script влияют на порядок выполнения скриптов JavaScript, а также в каких ситуациях стоит их использовать.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="135508"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="135508"></div>
+<div class="tproger-mark" data-loaded="no" data-post="135508"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 89px; background-color: #4A6D9A" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Порядок выполнения скриптов в HTML. Тег script и атрибуты async, defer, module, nomodule и src" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/10/scripts-order-icon-cover-icon-1.png" data-srcset="https://tproger.ru/s3/uploads/2020/10/scripts-order-icon-cover-icon-1-2x.png 2x, https://tproger.ru/s3/uploads/2020/10/scripts-order-icon-cover-icon-1-3x.png 3x, https://tproger.ru/s3/uploads/2020/10/scripts-order-icon-cover-icon-1-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-133633" class="box item post-133633 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-web tag-frontend post-icon">
+<a href="https://tproger.ru/articles/top-5-js-libs-for-business-apps/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Топ 5 JS-библиотек для бизнес приложений в 2020-2021</h2>
+</div>
+<div class="entry-content">
+<p>Рассматриваем лучшие UI библиотеки для создания и развития бизнес-приложений на JavaScript.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="133633"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="133633"></div>
+<div class="tproger-mark" data-loaded="no" data-post="133633"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #7ccedc" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Топ 5 JS-библиотек для бизнес приложений в 2020-2021" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-89-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-89-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-89-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-89-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-133496" class="box item post-133496 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-web post-icon">
+<a href="https://tproger.ru/articles/handling-exceptions-in-javascript/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Обработка ошибок в JavaScript</h2>
+</div>
+<div class="entry-content">
+<p>Рассматриваем, что из себя представляют ошибки в JS, какими способами можно их обрабатывать, что делать с ошибками зависимостей и не только.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="133496"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="133496"></div>
+<div class="tproger-mark" data-loaded="no" data-post="133496"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #b2dcff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Обработка ошибок в JavaScript" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-86-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-86-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-86-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/09/iconfinder-icon-86-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-132146" class="box item post-132146 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-javascript tag-web tag-frontend post-icon">
+<a href="https://tproger.ru/articles/customizing-build-of-angular-project/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Кастомизация сборки Angular-проекта</h2>
+</div>
+<div class="entry-content">
+<p>При сборке Angular-приложения со временем возникает задача, которую не решить с помощью того, что доступно из коробки. Узнаём, что делать в таком случае.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="132146"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="132146"></div>
+<div class="tproger-mark" data-loaded="no" data-post="132146"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #effaff" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Кастомизация сборки Angular-проекта" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/07/iconfinder-icon-56-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/07/iconfinder-icon-56-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/07/iconfinder-icon-56-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/07/iconfinder-icon-56-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+<article id="post-131735" class="box item post-131735 post type-post status-publish format-standard has-post-thumbnail hentry category-articles tag-css tag-html tag-javascript tag-web tag-interface-design-ux tag-internet post-icon">
+<a href="https://tproger.ru/articles/clickable-area/" class="article-link" rel="bookmark"></a>
+<div class="post-text">
+<div class="post-title">
+<h2 class="entry-title">Хотел кликнуть, но не смог: как правильно настроить размер области клика</h2>
+</div>
+<div class="entry-content">
+<p>Рассматриваем несколько распространённых проблем с UX и показываем, с какой из них столкнулись сами и как её решали.</p>
+<div class="post-tool-block-sizer">
+<div class="meta-content post-tool-block" data-container-loaded="no">
+<div class="tproger-comment-count" data-loaded="no" data-post="131735"></div>
+<div class="tproger-bookmark" data-loaded="no" data-post="131735"></div>
+<div class="tproger-mark" data-loaded="no" data-post="131735"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-icon" style="min-height: 90px; background-color: #FAFFB2" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<img alt="Обложка: Хотел кликнуть, но не смог: как правильно настроить размер области клика" itemprop="image url" data-src="https://tproger.ru/s3/uploads/2020/07/iconfinder_Clicks_5638218-cover-icon.png" data-srcset="https://tproger.ru/s3/uploads/2020/07/iconfinder_Clicks_5638218-cover-icon-2x.png 2x, https://tproger.ru/s3/uploads/2020/07/iconfinder_Clicks_5638218-cover-icon-3x.png 3x, https://tproger.ru/s3/uploads/2020/07/iconfinder_Clicks_5638218-cover-icon-4x.png 4x" class=" lazy" decoding="async"> </div> </article>
+</div><div class='pagination'><span class='current box pagination-element'>1</span><a href='https://tproger.ru/tag/javascript/page/2/' class='inactive box pagination-element hoverable'>2</a><a href='https://tproger.ru/tag/javascript/page/3/' class='inactive box pagination-element hoverable'>3</a><a class='box pagination-element hoverable forward icon-angle-right' href='https://tproger.ru/tag/javascript/page/2/'></a><a class='box pagination-element hoverable forward icon-angle-double-right' href='https://tproger.ru/tag/javascript/page/6/'></a></div>
+</div>
+<aside id="side-bar" data-container-loaded="no" data-container-loaded-callback="sideBarInit" data-container-loaded-max-seconds="10" class="widget-area"> <div id="sidebar__inner"> <div id="tproger_ads_widget-3" style="display: none;" class='fix-widget-container tproger-widget subscription-widget' data-loaded="no" data-ad data-type="1">
+<a href="#" target="_blank" class="fix-widget-main-a" style="color: unset;" rel="noopener"></a>
+<div class="fix-widget-content">
+<img src="" class="no-lazy-img fix-widget-img lazy" decoding="async">
+<p class="fix-widget-text"></p>
+<a href="#" target="_blank" class="widget-button-bottom fix-widget-button" rel="noopener">Узнать подробнее</a>
+</div>
+<div class="fix-widget-close-btn icon-close hoverable"></div>
+<div class="adsLinkBlockFixBaner">
+<a href="/ad/" targer="_blank" class="adsLinkFixBaner" rel="noopener">Реклама на tproger.ru</a>
+</div>
+</div>
+<div class="box widget_tag_cloud" data-role="widget_get_new_quote">
+<div class="citation">
+<div class="citation-quote citation-quote-left"><i class="icon-quote-left"></i></div>
+<div class="citation-widget">
+<p data-role="widget_quote_text" data-loaded="no">Загрузка...</p>
+</div>
+<div class="citation-quote citation-quote-right"><i class="icon-quote-right"></i></div>
+<div class="quote_refresh_block icon-arrows-ccw"></div>
+</div>
+</div> <a id="tproger-editor-widget" class="tproger-editor-widget box" href="/editor/?utm_source=sidebar" data-widget-id="editor_widget-2">
+<div class="text-redirect-editor">Написать пост</div>
+<img alt="keyboard-images" class="keyboard-images lazy" data-src="/wp-content/themes/bliss/assets/img/tproger-widget-posts-347.png" data-srcset="
+            /wp-content/themes/bliss/assets/img/tproger-widget-posts-174.png 1x,
+            /wp-content/themes/bliss/assets/img/tproger-widget-posts-347.png 2x" decoding="async">
+</a> <div id="tproger_ads_widget-5" style="display: none;" class='fix-widget-container tproger-widget subscription-widget' data-loaded="no" data-ad data-type="1">
+<a href="#" target="_blank" class="fix-widget-main-a" style="color: unset;" rel="noopener"></a>
+<div class="fix-widget-content">
+<img src="" class="no-lazy-img fix-widget-img lazy" decoding="async">
+<p class="fix-widget-text"></p>
+<a href="#" target="_blank" class="widget-button-bottom fix-widget-button" rel="noopener">Узнать подробнее</a>
+</div>
+<div class="fix-widget-close-btn icon-close hoverable"></div>
+<div class="adsLinkBlockFixBaner">
+<a href="/ad/" targer="_blank" class="adsLinkFixBaner" rel="noopener">Реклама на tproger.ru</a>
+</div>
+</div>
+</div> </aside>
+</div>
+</div>
+<div id="cookie-notice-wrapper" style="display:none">
+<div id="cookie-notice"><span class="cookie-notice-text">Обычное дело: мы используем cookie.</span> <a href="/about/cookie/" target="_blank" class="cookie-notice-about">Здесь&nbsp;можно&nbsp;узнать,&nbsp;зачем</a></div>
+<div class="btn bluth tproger cookie-notice-close">Хорошо</div>
+</div>
+<footer id="footer" class="show-on-idle">
+<div id="footer-body" class="windowed">
+<div id="custom_html-2" class="widget_text span4 widget_custom_html"><div class="textwidget custom-html-widget"><div><span class="footer-header">Типичный программист</span>
+<a href="/about/" class="footer-a">О&nbsp;проекте</a>
+<a href="/ad/?utm_referrer=footer" class="footer-a">Реклама</a>
+</div><div class="footer-dark-a-wrapper"><a href="https://tproger.ru/terms.pdf" class="footer-dark-a">Пользовательское&nbsp;соглашение</a><a href="https://tproger.ru/privacy.pdf" class="footer-dark-a">Политика&nbsp;конфиденциальности</a></div>
+<div class="footer-dark-a-wrapper footer-with-logo"><a href="https://tprg.ru/regru-footer" class="footer-dark-a" data-wpel-link="external" target="_blank" rel="nofollow noopener noreferrer">Используем&nbsp;серверы&nbsp;<img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;57px&quot; viewBox=&quot;0 0 57 28&quot;%3E%3C/svg%3E" class="footer-sponsor-img lazy" width="57" height="28" alt="Логотип REG.RU" data-src="https://tproger.ru/s3/uploads/custom/regru-logo.svg" decoding="async"></a></div></div></div><div id="custom_html-4" class="widget_text span4 widget_custom_html"><div class="textwidget custom-html-widget"><span class="footer-header">Наши аккаунты</span>
+<span class="social-footer" itemscope itemtype="http://schema.org/Organization">
+<meta itemprop="logo" content="https://cdn.tproger.ru/android-chrome-32x32.png">
+<meta itemprop="url" content="https://tproger.ru">
+<meta itemprop="name" content="Tproger">
+<link itemprop="url" href="https://tproger.ru/">
+<a class="social-footer-a icon-vkontakte" itemprop="sameAs" href="https://vk.com/tproger"></a>
+<a class="social-footer-a icon-facebook" itemprop="sameAs" href="https://www.facebook.com/tproger/"></a>
+<a class="social-footer-a icon-twitter" itemprop="sameAs" href="https://twitter.com/tproger"></a>
+<a class="social-footer-a icon-telegram" itemprop="sameAs" href="tg://resolve?domain=tproger_official"></a>
+<a class="social-footer-a icon-yazen" itemprop="sameAs" href="https://zen.yandex.ru/tproger"></a>
+<a class="social-footer-a icon-rss" href="https://tproger.ru/feed/"></a>
+</span>
+<div id="subscribe-wrapper" style="display: none">
+<a href="javascript:void(0)" id="subscribe-link"><i class="icon-bell"></i> Включить уведомления</a>
+</div>
+<span id="mistape-widget-message">
+Нашли опечатку? Выделите фрагмент и отправьте нажатием Ctrl+Enter.
+</span></div></div><div id="custom_html-5" class="widget_text span4 widget_custom_html"><div class="textwidget custom-html-widget"><div class="footer-contacts"><span class="footer-header">Контакты для сотрудничества</span>
+<span>Телефон: <a href="tel:+79165597110">+7 916 559-71-10</a></span>
+<span>E-mail: <a href="mailto:sales@tproger.ru">sales@tproger.ru</a></span>
+</div></div></div> </div>
+<div id="wrapfabtest">
+<div class="adBanner"></div>
+</div>
+</footer>
+</div>
+<script>
+window.ym=window.ym||function(){(ym.a=ym.a||[]).push(arguments)};ym.l=1*new Date();
+ym(27485085, "init", {clickmap: false, trackLinks: true, accurateTrackBounce: true, webvisor: false});
+</script>
+<script type="text/javascript" src="https://proxy.tproger.ru/yandex-metrika.js" async></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/27485085" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://tproger.ru/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://tproger.ru/search/?searchid=2415386&text={search_term_string}&web=0",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<div style="display:none;" class="tproger-elevator-block" id="tproger-elevator">
+<div id="tproger-arrow" class="elevator-arrow icon-up-open"></div>
+</div>
+<script>var OneSignal = window.OneSignal || [];</script>
+<script type="text/javascript" src="https://proxy.tproger.ru/vk-openapi.js" onload="window.setupVK && window.setupVK()" async="async"></script>
+<script type="text/javascript" src="https://proxy.tproger.ru/onesignal-sdk.js" onload="window.setupOneSignal && window.setupOneSignal()" async="async"></script>
+<script type="module" src="/wp-content/themes/bliss/assets/js/instant-page.x59707.js"></script><script>
+	window.ta=window.ta||function(){(ta.q=ta.q||[]).push([new Date,...arguments])};
+	ta('pageview', 3, { pageReferrer: document.referrer });	</script><script>var widgetsNonce='9209b0bcab';</script> <script>
+			!function(){if('PerformanceLongTaskTiming' in window){var g=window.__tti={e:[]};
+			g.o=new PerformanceObserver(function(l){g.e=g.e.concat(l.getEntries())});
+			g.o.observe({entryTypes:['longtask']})}}();
+			</script> <div id="tagsModal" style="display:none">
+<div class="closebt-container close-tagsModal">
+<img class="closebt lazy" alt="Закрыть" data-src="/wp-content/themes/bliss/assets/img/close-modal.svg" decoding="async"> </div>
+<div class="modal-container widget_tag_cloud">
+<div class="modal-tag-cloud tagcloud">
+<div class="tag-category" data-tag="brands"><h3>По брендам</h3><a class="tag-a" href='/tag/adobe/'>Adobe</a><a class="tag-a" href='/tag/amazon/'>Amazon</a><a class="tag-a" href='/tag/apple/'>Apple</a><a class="tag-a" href='/tag/cloudflare/'>Cloudflare</a><a class="tag-a" href='/tag/facebook/'>Facebook</a><a class="tag-a" href='/tag/github/'>GitHub</a><a class="tag-a" href='/tag/gitlab/'>GitLab</a><a class="tag-a" href='/tag/google/'>Google</a><a class="tag-a" href='/tag/ibm/'>IBM</a><a class="tag-a" href='/tag/intel/'>Intel</a><a class="tag-a" href='/tag/jetbrains/'>JetBrains</a><a class="tag-a" href='/tag/microsoft/'>Microsoft</a><a class="tag-a" href='/tag/mit/'>MIT</a><a class="tag-a" href='/tag/mozilla/'>Mozilla</a><a class="tag-a" href='/tag/nvidia/'>NVIDIA</a><a class="tag-a" href='/tag/oracle/'>Oracle</a><a class="tag-a" href='/tag/samsung/'>Samsung</a><a class="tag-a" href='/tag/stack-overflow/'>Stack Overflow</a><a class="tag-a" href='/tag/telegram/'>Telegram</a><a class="tag-a" href='/tag/windows/'>Windows</a><a class="tag-a" href='/tag/vkontakte/'>ВКонтакте</a><a class="tag-a" href='/tag/rkn/'>Роскомнадзор</a><a class="tag-a" href='/tag/yandex/'>Яндекс</a></div><div class="tag-category" data-tag="fields"><h3>По направлениям</h3><a class="tag-a" href='/tag/big-data/'>Big Data</a><a class="tag-a" href='/tag/data-science/'>Data Science</a><a class="tag-a" href='/tag/devops/'>DevOps</a><a class="tag-a" href='/tag/hardware/'>Hardware</a><a class="tag-a" href='/tag/hr/'>HR</a><a class="tag-a" href='/tag/bots/'>Боты</a><a class="tag-a" href='/tag/blockchain/'>Блокчейн</a><a class="tag-a" href='/tag/veb-design/'>Веб-дизайн</a><a class="tag-a" href='/tag/web/'>Веб-разработка</a><a class="tag-a" href='/tag/virtual-reality/'>Виртуальная реальность</a><a class="tag-a" href='/tag/interface-design-ux/'>Дизайн интерфейсов и UX</a><a class="tag-a" href='/tag/augmented-reality/'>Дополненная реальность</a><a class="tag-a" href='/tag/iot/'>Интернет вещей</a><a class="tag-a" href='/tag/ai/'>Искусственный интеллект</a><a class="tag-a" href='/tag/quantum-computing/'>Квантовые вычисления</a><a class="tag-a" href='/tag/computer-graphics/'>Компьютерная графика</a><a class="tag-a" href='/tag/computer-vision/'>Компьютерное зрение</a><a class="tag-a" href='/tag/cryptocurrency/'>Криптовалюты</a><a class="tag-a" href='/tag/crypto/'>Криптография</a><a class="tag-a" href='/tag/machine-learning/'>Машинное обучение</a><a class="tag-a" href='/tag/mobiledev/'>Мобильная разработка</a><a class="tag-a" href='/tag/neural-network/'>Нейронные сети</a><a class="tag-a" href='/tag/cloud/'>Облачные технологии</a><a class="tag-a" href='/tag/gamedev/'>Разработка игр</a><a class="tag-a" href='/tag/robots/'>Роботы</a><a class="tag-a" href='/tag/sysadm/'>Системное администрирование</a><a class="tag-a" href='/tag/testing/'>Тестирование</a><a class="tag-a" href='/tag/project-management/'>Управление проектами</a><a class="tag-a" href='/tag/frontend/'>Фронтенд</a><a class="tag-a" href='/tag/math-and-probability/'>Математика и теория вероятностей</a><a class="tag-a" href='/tag/fintech/'>Финтех</a></div><div class="tag-category" data-tag="languages"><h3>По языкам и технологиям</h3><a class="tag-a" href='/tag/cpp/'>C++</a><a class="tag-a" href='/tag/c-sharp/'>C#</a><a class="tag-a" href='/tag/java/'>Java</a><a class="tag-a" href='/tag/javascript/'>JavaScript</a><a class="tag-a" href='/tag/css/'>CSS</a><a class="tag-a" href='/tag/html/'>HTML</a><a class="tag-a" href='/tag/golang/'>Golang</a><a class="tag-a" href='/tag/kotlin/'>Kotlin</a><a class="tag-a" href='/tag/php/'>PHP</a><a class="tag-a" href='/tag/python/'>Python</a><a class="tag-a" href='/tag/ruby/'>Ruby</a><a class="tag-a" href='/tag/ruby-on-rails/'>Ruby on Rails</a><a class="tag-a" href='/tag/rust/'>Rust</a><a class="tag-a" href='/tag/scala/'>Scala</a><a class="tag-a" href='/tag/sql/'>SQL</a><a class="tag-a" href='/tag/swift/'>Swift</a><a class="tag-a" href='/tag/typescript/'>TypeScript</a><a class="tag-a" href='/tag/c-language/'>Язык Си</a><a class="tag-a" href='/tag/asm/'>Язык ассемблера</a><a class="tag-a" href='/tag/r-language/'>Язык R</a><a class="tag-a" href='/tag/lua/'>Lua</a><a class="tag-a" href='/tag/objective-c/'>Objective-C</a><a class="tag-a" href='/tag/perl/'>Perl</a><a class="tag-a" href='/tag/dot-net/'>.NET</a><a class="tag-a" href='/tag/django/'>Django</a><a class="tag-a" href='/tag/docker/'>Docker</a><a class="tag-a" href='/tag/mysql/'>MySQL</a><a class="tag-a" href='/tag/node-js/'>Node.js</a><a class="tag-a" href='/tag/react/'>React</a><a class="tag-a" href='/tag/webassembly/'>WebAssembly</a></div><div class="tag-category" data-tag="others"><a class="tag-a" href='/tag/3d-printer/'>3D-принтер</a><a class="tag-a" href='/tag/agile/'>Agile</a><a class="tag-a" href='/tag/android/'>Android</a><a class="tag-a" href='/tag/api/'>API</a><a class="tag-a" href='/tag/app-store/'>App Store</a><a class="tag-a" href='/tag/arduino/'>Arduino</a><a class="tag-a" href='/tag/arm/'>ARM</a><a class="tag-a" href='/tag/asp-net/'>Asp.NET</a><a class="tag-a" href='/tag/bitcoin/'>Bitcoin</a><a class="tag-a" href='/tag/deepmind/'>DeepMind</a><a class="tag-a" href='/tag/diy/'>DIY</a><a class="tag-a" href='/tag/ethereum/'>Ethereum</a><a class="tag-a" href='/tag/f8-2017/'>F8 2017</a><a class="tag-a" href='/tag/firefox/'>Firefox</a><a class="tag-a" href='/tag/git/'>Git</a><a class="tag-a" href='/tag/google-chrome/'>Google Chrome</a><a class="tag-a" href='/tag/google-io-2017/'>Google I/O 2017</a><a class="tag-a" href='/tag/gtc-2017/'>GTC 2017</a><a class="tag-a" href='/tag/ide/'>IDE</a><a class="tag-a" href='/tag/ios/'>iOS</a><a class="tag-a" href='/tag/covid-19/'>IT во время чумы</a><a class="tag-a" href='/tag/json/'>JSON</a><a class="tag-a" href='/tag/linux/'>Linux</a><a class="tag-a" href='/tag/macos/'>macOS</a><a class="tag-a" href='/tag/build-2017/'>Microsoft Build 2017</a><a class="tag-a" href='/tag/nosql/'>NoSQL</a><a class="tag-a" href='/tag/open-source/'>Open Source</a><a class="tag-a" href='/tag/openai/'>OpenAI</a><a class="tag-a" href='/tag/opera/'>Opera</a><a class="tag-a" href='/tag/product-development/'>Product Development</a><a class="tag-a" href='/tag/qa/'>QA</a><a class="tag-a" href='/tag/raspberry-pi/'>Raspberry Pi</a><a class="tag-a" href='/tag/reactjs/'>ReactJS</a><a class="tag-a" href='/tag/seo/'>SEO</a><a class="tag-a" href='/tag/soft-skills/'>Soft Skills</a><a class="tag-a" href='/tag/tesla/'>Tesla</a><a class="tag-a" href='/tag/tproger-changelog/'>Tproger Changelog</a><a class="tag-a" href='/tag/twitter/'>Twitter</a><a class="tag-a" href='/tag/unity/'>Unity</a><a class="tag-a" href='/tag/unix/'>unix</a><a class="tag-a" href='/tag/vpn/'>VPN</a><a class="tag-a" href='/tag/wi-fi/'>Wi-Fi</a><a class="tag-a" href='/tag/windows-10/'>Windows 10</a><a class="tag-a" href='/tag/wordpress/'>WordPress</a><a class="tag-a" href='/tag/youtube/'>YouTube</a><a class="tag-a" href='/tag/autopilot/'>Автопилот</a><a class="tag-a" href='/tag/algorithms/'>Алгоритмы</a><a class="tag-a" href='/tag/algos-and-data-structs/'>Алгоритмы и структуры данных</a><a class="tag-a" href='/tag/alisa/'>Алиса</a><a class="tag-a" href='/tag/analiz-dannyh/'>Анализ данных</a><a class="tag-a" href='/tag/analytics/'>Аналитика</a><a class="tag-a" href='/tag/software-architecture/'>Архитектура ПО</a><a class="tag-a" href='/tag/db/'>Базы данных</a><a class="tag-a" href='/tag/security/'>Безопасность</a><a class="tag-a" href='/tag/safe-code/'>Безопасный код</a><a class="tag-a" href='/tag/autopilot-2/'>Беспилотники</a><a class="tag-a" href='/tag/biznes-analitika/'>Бизнес-аналитика</a><a class="tag-a" href='/tag/biotechnology/'>Биотехнологии</a><a class="tag-a" href='/tag/browsers/'>Браузеры</a><a class="tag-a" href='/tag/quick-start/'>Быстрый старт</a><a class="tag-a" href='/tag/backend/'>Бэкенд</a><a class="tag-a" href='/tag/vzlom/'>Взлом</a><a class="tag-a" href='/tag/visualization/'>Визуализация</a><a class="tag-a" href='/tag/brain-teasers/'>Головоломки</a><a class="tag-a" href='/tag/guest-post/'>Гостевая публикация</a><a class="tag-a" href='/tag/for-motivation/'>Для мотивации</a><a class="tag-a" href='/tag/for-beginners/'>Для начинающих</a><a class="tag-a" href='/tag/for-advanced/'>Для продвинутых</a><a class="tag-a" href='/tag/for-amateurs/'>Для продолжающих</a><a class="tag-a" href='/tag/expert-problems/'>Задачи повышенной сложности</a><a class="tag-a" href='/tag/middle-problems/'>Задачи умеренной сложности</a><a class="tag-a" href='/tag/igra/'>Игра</a><a class="tag-a" href='/tag/games/'>Игры для программистов</a><a class="tag-a" href='/tag/ilon-mask/'>Илон Маск</a><a class="tag-a" href='/tag/tools/'>Инструменты</a><a class="tag-a" href='/tag/command-line-tools/'>Инструменты командной строки</a><a class="tag-a" href='/tag/interesting-projects/'>Интересные проекты</a><a class="tag-a" href='/tag/internet/'>Интернет</a><a class="tag-a" href='/tag/it-history/'>История IT</a><a class="tag-a" href='/tag/success-story/'>История успеха</a><a class="tag-a" href='/tag/career/'>Карьера</a><a class="tag-a" href='/tag/kiberbezopasnost/'>Кибербезопасность</a><a class="tag-a" href='/tag/code-style/'>Кодстайл</a><a class="tag-a" href='/tag/compilers/'>Компиляторы</a><a class="tag-a" href='/tag/conferences/'>Конференции</a><a class="tag-a" href='/tag/good-hack/'>Красивый хак</a><a class="tag-a" href='/tag/best-practice/'>Лучшая практика</a><a class="tag-a" href='/tag/toplang2020/'>Лучший язык 2020</a><a class="tag-a" href='/tag/mining/'>Майнинг</a><a class="tag-a" href='/tag/arrays-and-strings/'>Массивы и строки</a><a class="tag-a" href='/tag/guest/'>Материалы от друзей Tproger</a><a class="tag-a" href='/tag/messendzher/'>Мессенджер</a><a class="tag-a" href='/tag/software-development/'>Методологии разработки</a><a class="tag-a" href='/tag/microservices/'>Микросервисы</a><a class="tag-a" href='/tag/multithreading/'>Многопоточность</a><a class="tag-a" href='/tag/music/'>Музыка</a><a class="tag-a" href='/tag/english/'>На английском языке</a><a class="tag-a" href='/tag/skills/'>Навыки</a><a class="tag-a" href='/tag/low-level-coding/'>Низкоуровневое программирование</a><a class="tag-a" href='/tag/new-year/'>Новый Год</a><a class="tag-a" href='/tag/obrazovanie/'>Образование</a><a class="tag-a" href='/tag/courses/'>Обучающие курсы</a><a class="tag-a" href='/tag/learn-programming/'>Обучение программированию</a><a class="tag-a" href='/tag/oop/'>Объектно-ориентированное программирование</a><a class="tag-a" href='/tag/competitive-programming/'>Олимпиадное программирование</a><a class="tag-a" href='/tag/operating-systems/'>Операционные системы</a><a class="tag-a" href='/tag/optimization/'>Оптимизация</a><a class="tag-a" href='/tag/dev-organising/'>Организация разработки</a><a class="tag-a" href='/tag/programming-concepts/'>Основные принципы программирования</a><a class="tag-a" href='/tag/debugging/'>Отладка</a><a class="tag-a" href='/tag/pavel-durov/'>Павел Дуров</a><a class="tag-a" href='/tag/parsing/'>Парсинг</a><a class="tag-a" href='/tag/partnered/'>Партнёрский материал</a><a class="tag-a" href='/tag/design-patterns/'>Паттерны проектирования</a><a class="tag-a" href='/tag/personalnye-dannye/'>Персональные данные</a><a class="tag-a" href='/tag/ugc/'>Пост пользователя</a><a class="tag-a" href='/tag/prilozhenie/'>Приложение</a><a class="tag-a" href='/tag/performance/'>Производительность</a><a class="tag-a" href='/tag/processor/'>Процессор</a><a class="tag-a" href='/tag/job/'>Работа</a><a class="tag-a" href='/tag/recognition/'>Распознавание</a><a class="tag-a" href='/tag/reactive/'>Реактивное программирование</a><a class="tag-a" href='/tag/retro/'>Ретро</a><a class="tag-a" href='/tag/rossija/'>Россия</a><a class="tag-a" href='/tag/services/'>Сервисы</a><a class="tag-a" href='/tag/network-protocols/'>Сетевые протоколы</a><a class="tag-a" href='/tag/job-interview/'>Собеседование</a><a class="tag-a" href='/tag/advices/'>Советы</a><a class="tag-a" href='/tag/social-networks/'>Социальные сети</a><a class="tag-a" href='/tag/startups/'>Стартапы</a><a class="tag-a" href='/tag/stoit-prochitat/'>Стоит прочитать</a><a class="tag-a" href='/tag/supercomputers/'>Суперкомпьютеры</a><a class="tag-a" href='/tag/ujazvimost/'>Уязвимость</a><a class="tag-a" href='/tag/data-storage-formats/'>Форматы хранения данных</a><a class="tag-a" href='/tag/frameworks/'>Фреймворки</a><a class="tag-a" href='/tag/functional-programming/'>Функциональное программирование</a><a class="tag-a" href='/tag/hakery/'>Хакеры</a><a class="tag-a" href='/tag/hobby/'>Хобби</a><a class="tag-a" href='/tag/meltdown-spectre/'>Чипокалипсис</a><a class="tag-a" href='/tag/cheatsheets/'>Шпаргалки</a><a class="tag-a" href='/tag/programming-languages/'>Языки программирования</a></div> </div>
+</div>
+</div>
+<script defer src="https://tproger.ru/wp-content/cache/minify/adc36.x59707.js"></script>
+<script type='text/javascript' id='tproger-elevator-js-extra'>
+/* <![CDATA[ */
+var tprogerElevator = {"pluginsUrl":"https:\/\/tproger.ru\/wp-content\/plugins"};
+/* ]]> */
+</script>
+<script defer src="https://tproger.ru/wp-content/cache/minify/f8ec1.x59707.js"></script>
+<script>
+				function showPage() {
+					window.requestAnimationFrame(() => {
+						const page = document.getElementById('page')
+						if (page && page.style.display !== '') {
+							page.style.display = null
+						}
+						document.querySelectorAll('#fake-post, #fake-scroll, #fake-style').forEach(element => element.remove())
+					})
+				}
+				setTimeout(showPage, 3000) // in case of error
+									document.fonts.ready.then(showPage)
+							</script> <script>
+			const blu = {'site_url': 'https://tproger.ru', 'ajaxurl': 'https://tproger.ru/wp-admin/admin-ajax.php'};
+		</script>
+</body>
+</html>
